@@ -5,6 +5,7 @@ $(function() {
     reset();
     $('.js-section-' + sectionName).show();
     $('.js-button-' + sectionName).addClass('active');
+    $('.js-button.active.btn-default').addClass('btn-primary').removeClass('btn-default');
     window.location.hash = currentSectionName = sectionName;
     if (scroll) {
       $('html, body').scrollTop($('.js-toolbar').offset().top);
@@ -13,10 +14,11 @@ $(function() {
 
   function reset() {
     $('.js-section').hide();
+    $('.js-button.active.btn-primary').addClass('btn-default').removeClass('btn-primary');
     $('.js-button').removeClass('active');
   }
 
-  var currentSectionName = "";
+  var currentSectionName = '';
   if (window.location.hash) {
     showSection(window.location.hash.replace('#', ''), false);
   }
