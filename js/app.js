@@ -1,5 +1,5 @@
 $(function() {
-  var currentSectionName = "";
+  FastClick.attach(document.body);
 
   function showSection(sectionName, scroll) {
     reset();
@@ -16,6 +16,7 @@ $(function() {
     $('.js-button').removeClass('active');
   }
 
+  var currentSectionName = "";
   if (window.location.hash) {
     showSection(window.location.hash.replace('#', ''), false);
   }
