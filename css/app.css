@@ -1,0 +1,52 @@
+body {
+  padding: 30px 0 80px;
+}
+
+pre {
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+blockquote {
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+h1, .h1 {
+  font-size: 42px;
+  letter-spacing: -1px;
+}
+
+h2, .h2 {
+  font-size: 36px;
+  letter-spacing: -1px;
+}
+
+.h3, .h4, .h5, .h6 { letter-spacing: 0; }
+
+.navbar {
+  display: none;
+}
+
+.is-navbar-visible {
+  display: block;
+}
+
+.btn-default {
+  background-color: #f3f3f3;
+}
+
+.markdown-logo {
+  opacity: 0.8;
+  width: 100px;
+}
+
+.markdown-sections {
+  margin-top: 30px;
+}
+
+.markdown-section {
+  display: none;
+}
+

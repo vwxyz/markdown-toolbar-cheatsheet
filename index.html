@@ -1,0 +1,86 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Markdown Cheatsheet: Toolbar Style</title>
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type='text/css'>
+    <link href="{{ site.baseurl }}css/app.css" rel="stylesheet" type='text/css'>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top js-navbar hidden-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-10 col-md-offset-1">
+            <ul class="nav navbar-nav">
+              {% for section in site.data.sections %}
+                <li class="js-button js-button-{{ section.name }}">
+                  <a href="#"  class="js-button-clicktarget" data-section="{{ section.name }}" data-is-navbar="true" data-toggle="tooltip" data-placement="bottom" title="{{ section.icon_label }}">
+                    {% if section.button_text %}
+                      {{ section.button_text }}
+                    {% else %}
+                      <i class="fa {{ section.icon_class }}"></i>
+                    {% endif %}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 text-center">
+          <p><img class="markdown-logo" src="{{ site.baseurl }}img/markdown-mark.svg" alt="Markdown"></p>
+          <h1 class="h3"><strong>Markdown Cheatsheet:</strong><br>Toolbar Style</h1>
+          <p class="text-muted">An intuitive <a href="http://daringfireball.net/projects/markdown/" target="_blank">markdown</a> cheatsheet for non-tech savvy people. Uses the toolbar similar to the ones used by MS Word, Google Docs, Pages, Wordpress, etc.</p>
+          <p>To get started, <strong>click</strong> on one of the buttons below ↓</p>
+        </div>
+        <div class="col-sm-12 col-md-10 col-md-offset-1 text-center">
+          <div class="btn-group js-toolbar">
+            {% for section in site.data.sections %}
+              <button type="button" class="btn btn-default js-button js-button-clicktarget js-button-{{ section.name }}" data-section="{{ section.name }}" data-toggle="tooltip" title="{{ section.icon_label }}">
+                {% if section.button_text %}
+                  {{ section.button_text }}
+                {% else %}
+                  <i class="fa {{ section.icon_class }}"></i>
+                {% endif %}
+              </button>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="markdown-sections js-sections">
+        {% for section in site.data.sections %}
+        <div class="js-section js-section-{{ section.name }} markdown-section">
+          {% include {{section.file}} %}
+        </div>
+        {% endfor %}
+      </div>
+      <footer class="text-center text-muted">
+        <div class="row">
+          <div class="col-sm-12 col-md-10 col-md-offset-1">
+            <hr>
+            <p>Created by <a href="http://twitter.com/chibicode">@chibicode</a>, Designer at <a href="https://www.edsurge.com">EdSurge</a>.</p>
+            <p>Source is available on <a href="http://github.com/chibicode/markdown-toolbar-cheatsheet" target="_blank">GitHub</a>.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="{{ site.baseurl }}js/waypoints.min.js"></script>
+    <script src="{{ site.baseurl }}js/app.js"></script>
+  </body>
+</html>
