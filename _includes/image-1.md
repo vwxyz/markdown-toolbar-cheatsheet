@@ -5,6 +5,6 @@ To add an image with a link, follow this format: `[![Image Name](Image Address)]
 
 ![Shut up](http://goo.gl/iCJCgQ)
 
-Image with a link to http://twitter.com/chibicode:
+Image with a link to `http://twitter.com/chibicode`:
 
 [![Sketch](http://goo.gl/74fTfU)](http://twitter.com/chibicode)
