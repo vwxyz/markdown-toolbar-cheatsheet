@@ -1,5 +1,5 @@
 - name: paragraphs
-  button_text: Paragraphs/Headings
+  button_text: "Paragraphs & Headings"
   file: paragraphs.html
 - name: bold
   icon_class: fa-bold
