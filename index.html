@@ -25,7 +25,7 @@
             <ul class="nav navbar-nav">
               {% for section in site.data.sections %}
                 <li class="js-button js-button-{{ section.name }}">
-                  <a href="#"  class="js-button-clicktarget" data-section="{{ section.name }}" data-is-navbar="true" data-toggle="tooltip" data-placement="bottom" title="{{ section.icon_label }}">
+                  <a href="{{ site.baseurl }}"  class="js-button-clicktarget" data-section="{{ section.name }}" data-is-navbar="true" data-toggle="tooltip" data-placement="bottom" title="{{ section.icon_label }}">
                     {% if section.button_text %}
                       {{ section.button_text }}
                     {% else %}
