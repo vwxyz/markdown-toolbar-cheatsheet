@@ -39,7 +39,7 @@ hr { border-color: #999; }
   display: block;
 }
 
-.btn-default {
+.btn-default, .btn-default:focus {
   background-color: #f3f3f3;
 }
 
