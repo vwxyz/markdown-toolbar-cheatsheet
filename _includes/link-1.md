@@ -1,4 +1,4 @@
-To create a link, follow this format: `[Link Text](Link Address)`. [Read this](http://daringfireball.net/projects/markdown/syntax#link) for more advanced methods.
+To create a link, follow this format: `[Link Text](Link Address)`. [Read this page](http://daringfireball.net/projects/markdown/syntax#link) for more advanced methods.
 <!--break-->
 This is a [link to Google](http://google.com).
 
