@@ -1,11 +1,15 @@
 body {
-  padding: 30px 0 80px;
+  padding: 20px 0 80px;
 }
 
 pre {
   padding: 0;
   background: none;
   border: none;
+}
+
+code {
+  white-space: normal;
 }
 
 blockquote {
@@ -39,7 +43,7 @@ h2, .h2 {
 
 .markdown-logo {
   opacity: 0.8;
-  width: 100px;
+  width: 80px;
 }
 
 .markdown-sections {
