@@ -1,13 +1,19 @@
 $(function() {
+  var currentSectionName = "";
+
   function showSection(sectionName, scroll) {
-    $('.js-section').hide();
+    reset();
     $('.js-section-' + sectionName).show();
-    $('.js-button').removeClass('active');
     $('.js-button-' + sectionName).addClass('active');
-    window.location.hash = sectionName;
+    window.location.hash = currentSectionName = sectionName;
     if (scroll) {
       $('html, body').scrollTop($('.js-toolbar').offset().top);
     }
+  }
+
+  function reset() {
+    $('.js-section').hide();
+    $('.js-button').removeClass('active');
   }
 
   if (window.location.hash) {
@@ -18,8 +24,16 @@ $(function() {
     container: 'body'
   }).click(function(e) {
     e.preventDefault();
-    showSection($(this).data('section'), $(this).data('is-navbar'));
+    var sectionName = $(this).data('section');
+    if (sectionName === currentSectionName) {
+      currentSectionName = "";
+      window.location.hash = '';
+      reset();
+    } else {
+      showSection(sectionName, $(this).data('is-navbar'));
+    }
   });
+
   $('.js-toolbar').waypoint(function(direction) {
     $('.js-navbar').toggleClass('is-navbar-visible', direction === 'down');
   }, {
