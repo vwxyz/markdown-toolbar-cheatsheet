@@ -1,6 +1,6 @@
 # Markdown Cheatsheet: Toolbar Style
 
-> An intuitive markdown cheatsheet for non-tech savvy people.
+> An intuitive markdown cheatsheet.
 
 It's live at http://markdown.chibi.io.
 
