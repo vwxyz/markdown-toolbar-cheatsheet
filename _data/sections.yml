@@ -41,3 +41,7 @@
   icon_class: fa-minus
   icon_label: Horizontal Line
   file: hr.html
+- name: code
+  icon_class: fa-code
+  icon_label: Code
+  file: code.html
