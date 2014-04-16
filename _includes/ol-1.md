@@ -1,4 +1,4 @@
-To create a numbered list, start each line with a number, followed by a period. Make sure to separate the list from other paragraphs/lists via a blank line.
+To create a numbered list, start each line with a number, followed by a period. Make sure to separate the list from other paragraphs/lists using a blank line.
 <!--break-->This is a paragraph.
 
 1. List Item 1
